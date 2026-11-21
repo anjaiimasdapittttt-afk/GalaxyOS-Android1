@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#02040a">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Galaxy OS Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="phone">
+  <div id="wall"></div>
+  <section id="home">
+    <div class="widget"><b id="wTime">00:00</b><span id="wDate"></span></div>
+    <div id="grid"></div>
+    <button id="dBtn" aria-label="Buka semua aplikasi"></button>
+  </section>
+  <section id="drawer" aria-label="Semua aplikasi">
+    <div id="dhandle"></div>
+    <div class="dtop"><input id="dq" type="search" placeholder="Cari aplikasi" autocomplete="off"><button id="drefresh" type="button" aria-label="Segarkan daftar aplikasi" title="Segarkan daftar aplikasi">⟳</button><button id="dsort">⇅ Urutan awal</button></div>
+    <div id="dstat"></div>
+    <div id="dgrid"></div>
+  </section>
+  <div id="win" hidden></div>
+  <section id="lock">
+    <div id="lTime">00:00</div><div id="lDate"></div>
+    <div id="unlock">⌃<small>Geser ke atas atau ketuk untuk membuka</small></div>
+  </section>
+  <header id="status">
+    <span id="sTime">00:00</span>
+    <span class="ind"><i id="iAir" hidden>✈</i><i id="iBt" hidden>ᛒ</i>
+      <svg id="iWifi" viewBox="0 0 24 24" width="15" height="15"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>
+      <span id="sig"><u></u><u></u><u></u><u></u></span>
+      <small id="batN">87</small><span id="bat"><em></em></span>
+    </span>
+  </header>
+  <div id="grab"></div>
+  <div id="scrim"></div>
+  <aside id="panel">
+    <div id="tiles"></div>
+    <div class="br">☀<input id="bri" type="range" min="20" max="100" value="100" aria-label="Kecerahan aplikasi"><button id="sysBri" type="button" aria-label="Pengaturan kecerahan sistem" title="Pengaturan kecerahan sistem">⚙</button></div>
+    <div class="nh"><b>Notifikasi</b><span><button id="lockBtn">🔒 Kunci</button><button id="clear">Hapus semua</button></span></div>
+    <div id="nlist"></div>
+    <div id="phandle"></div>
+  </aside>
+  <div id="toast"></div>
+  <button id="nav" aria-label="Beranda"></button>
+  <div id="dim"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
